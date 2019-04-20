@@ -2,7 +2,6 @@ package edu.uw.npctracker.core
 
 
 /*
- * Lukas Strobel Copyright 2019
+ * @author lstrobel
  */
-class DefaultTag(override val label: String): Tag {
-}
+class DefaultTag(override val label: String): Tag {}

@@ -45,15 +45,11 @@ class DefaultCharacter private constructor(
     }
 
     override fun addTag(tag: Tag): Character {
-        val newTags = HashSet(tags)
-        newTags.add(tag)
-        return DefaultCharacter(firstName, lastName, notes, newTags)
+        return DefaultCharacter(firstName, lastName, notes, tags.plus(tag))
     }
 
     override fun removeTag(tag: Tag): Character {
-        val newTags = HashSet(tags)
-        newTags.remove(tag)
-        return DefaultCharacter(firstName, lastName, notes, newTags)
+        return DefaultCharacter(firstName, lastName, notes, tags.minus(tag))
     }
 
     override fun hasTag(tag: Tag): Boolean {

@@ -1,4 +1,4 @@
-package edu.uw.npctracker
+package edu.uw.npctracker.core
 
 /*
  * @author lstrobel

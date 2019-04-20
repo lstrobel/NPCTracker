@@ -14,7 +14,7 @@ interface Model {
     /**
      * @param character the character to add to the model, if is already in model does nothing
      */
-    fun plusCharacter(character: Character)
+    fun addCharacter(character: Character)
 
     /**
      * @param character the character to remove to the model

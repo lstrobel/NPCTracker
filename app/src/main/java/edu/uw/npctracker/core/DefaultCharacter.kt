@@ -1,15 +1,17 @@
 package edu.uw.npctracker.core
 
+import androidx.room.*
 import java.time.Instant
 
 /*
  * @author lstrobel
  */
+@Entity(tableName = "characters")
 class DefaultCharacter private constructor(
-    private val firstName: String,
-    private val lastName: String,
-    private val notes: String,
-    private val tags: Set<Tag>
+    @PrimaryKey private val firstName: String,
+    @ColumnInfo(name = "last_name") private val lastName: String,
+    @ColumnInfo(name = "notes") private val notes: String,
+    @Ignore private val tags: Set<Tag> // not going to mess with the tags for now
 ) : Character {
 
     private val timestamp = Instant.now()

@@ -17,9 +17,9 @@ interface Model {
     fun addCharacter(character: Character)
 
     /**
-     * @param character the character to remove to the model
+     * @param character the character to remove to the model, returns true if successful, otherwise returns false
      */
-    fun removeCharacter(character: Character)
+    fun removeCharacter(character: Character) : Boolean
 
     /**
      * @return The list of characters currently in the model
